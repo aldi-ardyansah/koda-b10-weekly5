@@ -32,7 +32,7 @@ function NavLogin() {
                             <span className="font-['Public_Sans'] text-sm font-semibold text-(--font-color-black)">Aldi Ardyansah</span>
                             <span className="font-['IBM_Plex_Mono'] text-[10px] text-(--font-color-gray)">aldi@wargareport.id</span>
                         </div>
-                        <Link to="/list-complaint" className="flex items-center gap-2 px-4 py-3 font-['Public_Sans'] text-xs text-(--font-color-gray) hover:bg-(--bg-color-light-gray)">
+                        <Link to="/list-complaint" className="flex items-center gap-2 px-4 py-3 font-['Public_Sans'] text-xs text-(--font-color-gray) hover:bg-(--bg-color-light-gray) border-b border-(--border-color-gray)">
                             <img src="/icons/i-user.svg" alt="" />My Filed Reports
                         </Link>
                         <Link to="/" className="flex items-center gap-2 px-4 py-3 font-['Public_Sans'] text-xs text-(--font-color-red) hover:bg-(--bg-color-light-red)">
