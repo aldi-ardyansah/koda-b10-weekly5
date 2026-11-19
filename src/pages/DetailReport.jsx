@@ -96,7 +96,7 @@ function DetailReport() {
                 </div>
                 <div className="flex flex-col pl-2">
                   <div className="relative flex gap-3 pb-3 pl-3 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-px before:bg-(--border-color-gray)">
-                    <div className="absolute -left-[10px] top-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-(--border-color-green-light) bg-(--bg-color-white)">
+                    <div className="absolute -left-2.5 top-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-(--border-color-green-light) bg-(--bg-color-white)">
                       <img className="h-3 w-3" src="/icons/i-user-green.svg" alt="Icon User" />
                     </div>
                     <div className="flex min-w-0 flex-1 flex-col gap-1.5">
@@ -109,7 +109,7 @@ function DetailReport() {
                     </div>
                   </div>
                   <div className="relative flex gap-3 pb-3 pl-3 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-px before:bg-(--border-color-gray)">
-                    <div className="absolute -left-[10px] top-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-(--border-color-green-light) bg-(--bg-color-white)">
+                    <div className="absolute -left-2.5 top-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-(--border-color-green-light) bg-(--bg-color-white)">
                       <img className="h-3 w-3" src="/icons/i-settings-green.svg" alt="Icon Settings" />
                     </div>
                     <div className="flex min-w-0 flex-1 flex-col gap-1.5">
@@ -122,7 +122,7 @@ function DetailReport() {
                     </div>
                   </div>
                   <div className="relative flex gap-3 pl-3 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-px before:bg-(--border-color-gray)">
-                    <div className="absolute -left-[10px] top-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-(--border-color-green-light) bg-(--bg-color-white)">
+                    <div className="absolute -left-2.5 top-0 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-(--border-color-green-light) bg-(--bg-color-white)">
                       <img className="h-3 w-3" src="/icons/i-shield-green.svg" alt="Icon Shield" />
                     </div>
                     <div className="flex min-w-0 flex-1 flex-col gap-1.5">

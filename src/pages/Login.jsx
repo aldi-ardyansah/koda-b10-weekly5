@@ -2,8 +2,8 @@ function Login({ isOpen = false, onClose = () => { } }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[2000] flex items-center justify-center bg-[rgba(19,35,27,0.55)] px-4 py-6">
-      <div className="w-full max-w-[480px] rounded-xl border border-[rgba(215,215,205,1)] bg-[rgba(255,253,248,1)] p-6 shadow-xl">
+    <div className="fixed inset-0 z-2000 flex items-center justify-center bg-[rgba(19,35,27,0.55)] px-4 py-6">
+      <div className="w-full max-w-120 rounded-xl border border-[rgba(215,215,205,1)] bg-[rgba(255,253,248,1)] p-6 shadow-xl">
         <div className="flex items-start justify-between gap-4">
           <div>
             <h2 className="font-['Fraunces'] text-2xl font-semibold text-[rgba(19,35,27,1)]">Sign In to WargaReport</h2>

@@ -6,119 +6,119 @@ export default function Topic() {
   return (
     <div className="min-h-screen bg-(--bg-color-body) font-['Public_Sans']">
       <NavLogin />
-      <main className="mx-auto mt-10 w-[90%] px-4 md:px-9">
-        <div className="report flex flex-col gap-9 lg:flex-row">
-          <div className="report-issue w-full lg:w-1/4">
-            <span className="report-issue-upheading ibm-plex-mono text-xs">COMMUNITY INTAKE</span>
-            <h2 className="report-issue-heading fraunces mt-2 text-3xl">Report an Issue</h2>
-            <span className="report-issue-subheading public-sans mt-2 block text-sm">Public civic reporting for Indonesian municipal services.</span>
-            <div className="report-issue-flow mt-8 flex flex-col gap-3">
-              <span className="button-flow-green flex items-center gap-3 rounded-lg bg-[rgba(230,242,235,1)] px-4 py-3 text-[rgba(15,107,79,1)]">
-                <span className="ibm-plex-mono report-issue-flow-number">01</span>
-                <span className="public-sans report-issue-flow-text">Topic</span>
+      <main className="mx-auto w-[90%] px-4 pt-25 md:px-9">
+        <div className="flex flex-col gap-8 lg:flex-row lg:gap-9">
+          <div className="w-full lg:w-1/4">
+            <span className="font-['IBM_Plex_Mono'] text-xs tracking-[1px] text-(--font-color-gray-light) font-medium">COMMUNITY INTAKE</span>
+            <h2 className="font-['Fraunces'] mt-2 text-2xl font-semibold text-(--font-color-black)">Report an Issue</h2>
+            <span className="font-['Public_Sans'] mt-2 block text-sm leading-[1.4] text-(--font-color-gray)">Public civic reporting for Indonesian municipal services.</span>
+            <div className="mt-3 flex flex-col gap-1">
+              <span className="button-flow-green flex items-center gap-3 rounded-full bg-(--bg-color-green) px-3 py-3 text-(--font-color-white)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">01</span>
+                <span className="font-['Public_Sans'] text-sm">Topic</span>
               </span>
-              <span className="button-flow-transparent flex items-center gap-3 px-4 py-3">
-                <span className="ibm-plex-mono report-issue-flow-number">02</span>
-                <span className="public-sans report-issue-flow-text">Location</span>
+              <span className="button-flow-transparent flex items-center gap-3 rounded-full px-3 py-3 text-(--font-color-gray-light)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">02</span>
+                <span className="font-['Public_Sans'] text-sm">Location</span>
               </span>
-              <span className="button-flow-transparent flex items-center gap-3 px-4 py-3">
-                <span className="ibm-plex-mono report-issue-flow-number">03</span>
-                <span className="public-sans report-issue-flow-text">Proof</span>
+              <span className="button-flow-transparent flex items-center gap-3 rounded-full px-3 py-3 text-(--font-color-gray-light)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">03</span>
+                <span className="font-['Public_Sans'] text-sm">Proof</span>
               </span>
-              <span className="button-flow-transparent flex items-center gap-3 px-4 py-3">
-                <span className="ibm-plex-mono report-issue-flow-number">04</span>
-                <span className="public-sans report-issue-flow-text">Review & Send</span>
+              <span className="button-flow-transparent flex items-center gap-3 rounded-full px-3 py-3 text-(--font-color-gray-light)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">04</span>
+                <span className="font-['Public_Sans'] text-sm">Review & Send</span>
               </span>
             </div>
-            <div className="report-issue-independent mt-8 rounded-xl bg-[rgba(232,241,245,1)] p-5">
-              <span className="report-issue-independent-heading public-sans flex items-center gap-2">
+            <div className="mt-3 rounded-xl border border-dashed border-(--border-color-gray-light) bg-(--bg-color-white) p-3">
+              <span className="font-['Public_Sans'] flex items-center gap-2 text-xs font-semibold text-(--font-color-black)">
                 <img src="/icons/i-shield.svg" alt="Icon Shield" />Independent Verification
               </span>
-              <p className="report-issue-independent-text public-sans mt-3 text-sm">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</p>
+              <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.7] text-(--font-color-gray-light)">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</p>
             </div>
-            <Link to="/live-feed" className="report-issue-cancel public-sans mt-6 block text-sm">Cancel and return to feed</Link>
+            <Link to="/live-feed" className="font-['Public_Sans'] mt-3 block text-sm font-semibold text-(--font-color-green)">Cancel and return to feed</Link>
           </div>
-          <div className="report-fixing w-full lg:w-3/4">
-            <div className="report-fixing-header mb-8">
-              <span className="report-fixing-upheading ibm-plex-mono text-xs">STEP 01 OF 04</span>
-              <h1 className="report-fixing-heading fraunces mt-2 text-3xl">What needs fixing?</h1>
-              <span className="report-fixing-subheading public-sans mt-2 block text-sm">Select the municipal service category that best matches the issue observed.</span>
+          <div className="w-full rounded-2xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-5 md:p-7.5 lg:w-3/4">
+            <div className="mb-3">
+              <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray-light)">STEP 01 OF 04</span>
+              <h1 className="font-['Fraunces'] mt-1 text-2xl font-semibold text-(--font-color-black)">What needs fixing?</h1>
+              <span className="font-['Public_Sans'] mt-1 block text-sm text-(--font-color-gray)">Select the municipal service category that best matches the issue observed.</span>
             </div>
-            <div className="report-fixing-main grid grid-cols-1 gap-4 md:grid-cols-2">
-              <label className="report-fixing-card relative cursor-pointer rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-5 has-[:checked]:border-[rgba(15,107,79,1)] has-[:checked]:bg-[rgba(230,242,235,1)]">
-                <input type="radio" name="report-category" value="roads-transit" className="absolute right-4 top-4 accent-[rgba(15,107,79,1)]" />
-                <div className="public-sans report-fixing-card-heading flex items-center gap-2 font-semibold">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+              <label className="relative cursor-pointer rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-3 transition-colors has-checked:border-(--border-color-green) has-checked:bg-(--bg-color-green-light)">
+                <input type="radio" name="topic" value="roads-transit" className="sr-only" />
+                <div className="font-['Public_Sans'] flex w-full items-center gap-2 text-sm font-semibold text-(--font-color-black)">
                   <img src="/icons/i-warning-green.svg" alt="Icon Warning" />
                   Roads & Transit
-                  <span className="report-fixing-card-heading-sla ibm-plex-mono ml-auto text-xs">48h SLA</span>
+                  <span className="font-['IBM_Plex_Mono'] ml-auto shrink-0 whitespace-nowrap rounded-full bg-(--bg-color-green-light) px-2 py-1 text-xs font-normal text-(--font-color-green)">48h SLA</span>
                 </div>
-                <span className="public-sans report-fixing-card-subheading mt-4 block text-sm">Pothole / Sidewalk (Trotoar)</span>
-                <p className="public-sans report-fixing-card-text mt-2 text-sm">Potholes, broken sidewalk slabs, damaged drainage grates</p>
+                <span className="font-['Public_Sans'] mt-3 block text-xs text-(--font-color-gray)">Pothole / Sidewalk (Trotoar)</span>
+                <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.4] text-(--font-color-gray-light)">Potholes, broken sidewalk slabs, damaged drainage grates</p>
               </label>
-              <label className="report-fixing-card relative cursor-pointer rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-5 has-[:checked]:border-[rgba(15,107,79,1)] has-[:checked]:bg-[rgba(230,242,235,1)]">
-                <input type="radio" name="report-category" value="water-sewage" className="absolute right-4 top-4 accent-[rgba(15,107,79,1)]" />
-                <div className="public-sans report-fixing-card-heading flex items-center gap-2 font-semibold">
+              <label className="relative cursor-pointer rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-3 transition-colors has-checked:border-(--border-color-green) has-checked:bg-(--bg-color-green-light)">
+                <input type="radio" name="topic" value="water-sewage" className="sr-only" />
+                <div className="font-['Public_Sans'] flex w-full items-center gap-2 text-sm font-semibold text-(--font-color-black)">
                   <img src="/icons/i-water-green.svg" alt="Icon Water" />
                   Water & Sewage
-                  <span className="report-fixing-card-heading-sla ibm-plex-mono ml-auto text-xs">24h SLA</span>
+                  <span className="font-['IBM_Plex_Mono'] ml-auto shrink-0 whitespace-nowrap rounded-full bg-(--bg-color-green-light) px-2 py-1 text-xs font-normal text-(--font-color-green)">24h SLA</span>
                 </div>
-                <span className="public-sans report-fixing-card-subheading mt-4 block text-sm">Water Burst / Pipa Bocor</span>
-                <p className="public-sans report-fixing-card-text mt-2 text-sm">Pipeline bursts, flooding tap leaks, dry taps</p>
+                <span className="font-['Public_Sans'] mt-3 block text-xs text-(--font-color-gray)">Water Burst / Pipa Bocor</span>
+                <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.4] text-(--font-color-gray-light)">Pipeline bursts, flooding tap leaks, dry taps</p>
               </label>
-              <label className="report-fixing-card relative cursor-pointer rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-5 has-[:checked]:border-[rgba(15,107,79,1)] has-[:checked]:bg-[rgba(230,242,235,1)]">
-                <input type="radio" name="report-category" value="street-lighting" className="absolute right-4 top-4 accent-[rgba(15,107,79,1)]" />
-                <div className="public-sans report-fixing-card-heading flex items-center gap-2 font-semibold">
+              <label className="relative cursor-pointer rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-3 transition-colors has-checked:border-(--border-color-green) has-checked:bg-(--bg-color-green-light)">
+                <input type="radio" name="topic" value="street-lighting" className="sr-only" />
+                <div className="font-['Public_Sans'] flex w-full items-center gap-2 text-sm font-semibold text-(--font-color-black)">
                   <img src="/icons/i-lighting-green.svg" alt="Icon Lighting" />
                   Street Lighting
-                  <span className="report-fixing-card-heading-sla ibm-plex-mono ml-auto text-xs">72h SLA</span>
+                  <span className="font-['IBM_Plex_Mono'] ml-auto shrink-0 whitespace-nowrap rounded-full bg-(--bg-color-green-light) px-2 py-1 text-xs font-normal text-(--font-color-green)">72h SLA</span>
                 </div>
-                <span className="public-sans report-fixing-card-subheading mt-4 block text-sm">Dark Street / PJU Padam</span>
-                <p className="public-sans report-fixing-card-text mt-2 text-sm">Dark street lamps (PJU), damaged base poles, broken traffic signals</p>
+                <span className="font-['Public_Sans'] mt-3 block text-xs text-(--font-color-gray)">Dark Street / PJU Padam</span>
+                <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.4] text-(--font-color-gray-light)">Dark street lamps (PJU), damaged base poles, broken traffic signals</p>
               </label>
-              <label className="report-fixing-card relative cursor-pointer rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-5 has-[:checked]:border-[rgba(15,107,79,1)] has-[:checked]:bg-[rgba(230,242,235,1)]">
-                <input type="radio" name="report-category" value="sanitation-waste" className="absolute right-4 top-4 accent-[rgba(15,107,79,1)]" />
-                <div className="public-sans report-fixing-card-heading flex items-center gap-2 font-semibold">
+              <label className="relative cursor-pointer rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-3 transition-colors has-checked:border-(--border-color-green) has-checked:bg-(--bg-color-green-light)">
+                <input type="radio" name="topic" value="sanitation-waste" className="sr-only" />
+                <div className="font-['Public_Sans'] flex w-full items-center gap-2 text-sm font-semibold text-(--font-color-black)">
                   <img src="/icons/i-trashbin-green.svg" alt="Icon Trashbin" />
                   Sanitation & Waste
-                  <span className="report-fixing-card-heading-sla ibm-plex-mono ml-auto text-xs">36h SLA</span>
+                  <span className="font-['IBM_Plex_Mono'] ml-auto shrink-0 whitespace-nowrap rounded-full bg-(--bg-color-green-light) px-2 py-1 text-xs font-normal text-(--font-color-green)">36h SLA</span>
                 </div>
-                <span className="public-sans report-fixing-card-subheading mt-4 block text-sm">Trash Pile / Sampah Liar</span>
-                <p className="public-sans report-fixing-card-text mt-2 text-sm">Illegal dump spots in alleys, overflowing TPS bins, river refuse</p>
+                <span className="font-['Public_Sans'] mt-3 block text-xs text-(--font-color-gray)">Trash Pile / Sampah Liar</span>
+                <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.4] text-(--font-color-gray-light)">Illegal dump spots in alleys, overflowing TPS bins, river refuse</p>
               </label>
-              <label className="report-fixing-card relative cursor-pointer rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-5 has-[:checked]:border-[rgba(15,107,79,1)] has-[:checked]:bg-[rgba(230,242,235,1)]">
-                <input type="radio" name="report-category" value="public-parks-trees" className="absolute right-4 top-4 accent-[rgba(15,107,79,1)]" />
-                <div className="public-sans report-fixing-card-heading flex items-center gap-2 font-semibold">
+              <label className="relative cursor-pointer rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-3 transition-colors has-checked:border-(--border-color-green) has-checked:bg-(--bg-color-green-light)">
+                <input type="radio" name="topic" value="public-parks-trees" className="sr-only" />
+                <div className="font-['Public_Sans'] flex w-full items-center gap-2 text-sm font-semibold text-(--font-color-black)">
                   <img src="/icons/i-tree-green.svg" alt="Icon Tree" />
                   Public Parks & Trees
-                  <span className="report-fixing-card-heading-sla ibm-plex-mono ml-auto text-xs">48h SLA</span>
+                  <span className="font-['IBM_Plex_Mono'] ml-auto shrink-0 whitespace-nowrap rounded-full bg-(--bg-color-green-light) px-2 py-1 text-xs font-normal text-(--font-color-green)">48h SLA</span>
                 </div>
-                <span className="public-sans report-fixing-card-subheading mt-4 block text-sm">Hazardous Tree / Rawan Tumbang</span>
-                <p className="public-sans report-fixing-card-text mt-2 text-sm">Falling branches (pohon rawan tumbang), RPTRA playground hazards</p>
+                <span className="font-['Public_Sans'] mt-3 block text-xs text-(--font-color-gray)">Hazardous Tree / Rawan Tumbang</span>
+                <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.4] text-(--font-color-gray-light)">Falling branches (pohon rawan tumbang), RPTRA playground hazards</p>
               </label>
-              <label className="report-fixing-card relative cursor-pointer rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-5 has-[:checked]:border-[rgba(15,107,79,1)] has-[:checked]:bg-[rgba(230,242,235,1)]">
-                <input type="radio" name="report-category" value="noise-disturbance" className="absolute right-4 top-4 accent-[rgba(15,107,79,1)]" />
-                <div className="public-sans report-fixing-card-heading flex items-center gap-2 font-semibold">
+              <label className="relative cursor-pointer rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-3 transition-colors has-checked:border-(--border-color-green) has-checked:bg-(--bg-color-green-light)">
+                <input type="radio" name="topic" value="noise-disturbance" className="sr-only" />
+                <div className="font-['Public_Sans'] flex w-full items-center gap-2 text-sm font-semibold text-(--font-color-black)">
                   <img src="/icons/i-speaker-green.svg" alt="Icon Speaker" />
                   Noise & Disturbance
-                  <span className="report-fixing-card-heading-sla ibm-plex-mono ml-auto text-xs">48h SLA</span>
+                  <span className="font-['IBM_Plex_Mono'] ml-auto shrink-0 whitespace-nowrap rounded-full bg-(--bg-color-green-light) px-2 py-1 text-xs font-normal text-(--font-color-green)">48h SLA</span>
                 </div>
-                <span className="public-sans report-fixing-card-subheading mt-4 block text-sm">Late-night Noise / Ketertiban</span>
-                <p className="public-sans report-fixing-card-text mt-2 text-sm">Nocturnal construction past 22:00 WIB, sidewalk encroachment</p>
+                <span className="font-['Public_Sans'] mt-3 block text-xs text-(--font-color-gray)">Late-night Noise / Ketertiban</span>
+                <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.4] text-(--font-color-gray-light)">Nocturnal construction past 22:00 WIB, sidewalk encroachment</p>
               </label>
-              <label className="report-fixing-card relative cursor-pointer rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-5 has-[:checked]:border-[rgba(15,107,79,1)] has-[:checked]:bg-[rgba(230,242,235,1)]">
-                <input type="radio" name="report-category" value="building-zoning" className="absolute right-4 top-4 accent-[rgba(15,107,79,1)]" />
-                <div className="public-sans report-fixing-card-heading flex items-center gap-2 font-semibold">
+              <label className="relative cursor-pointer rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-3 transition-colors has-checked:border-(--border-color-green) has-checked:bg-(--bg-color-green-light)">
+                <input type="radio" name="topic" value="building-zoning" className="sr-only" />
+                <div className="font-['Public_Sans'] flex w-full items-center gap-2 text-sm font-semibold text-(--font-color-black)">
                   <img src="/icons/i-building-green.svg" alt="Icon Building" />
                   Building & Zoning
-                  <span className="report-fixing-card-heading-sla ibm-plex-mono ml-auto text-xs">72h SLA</span>
+                  <span className="font-['IBM_Plex_Mono'] ml-auto shrink-0 whitespace-nowrap rounded-full bg-(--bg-color-green-light) px-2 py-1 text-xs font-normal text-(--font-color-green)">72h SLA</span>
                 </div>
-                <span className="public-sans report-fixing-card-subheading mt-4 block text-sm">Unsafe Construction / Bangunan</span>
-                <p className="public-sans report-fixing-card-text mt-2 text-sm">Unsafe scaffolding, structural hazards, building boundary violations</p>
+                <span className="font-['Public_Sans'] mt-3 block text-xs text-(--font-color-gray)">Unsafe Construction / Bangunan</span>
+                <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.4] text-(--font-color-gray-light)">Unsafe scaffolding, structural hazards, building boundary violations</p>
               </label>
             </div>
-            <div className="report-fixing-footer mt-8 flex items-center justify-between border-t border-[#e4dfd4] pt-6">
-              <Link to="/live-feed" className="report-fixing-footer-cancel public-sans text-sm">Cancel</Link>
-              <Link to="/location" className="report-fixing-footer-continue public-sans flex items-center gap-2 rounded-full bg-[rgba(15,107,79,1)] px-6 py-3 text-sm text-white">
+            <div className="mt-3 flex items-center justify-between border-t border-(--border-color-gray-light) pt-4">
+              <Link to="/live-feed" className="font-['Public_Sans'] px-4 py-2 text-sm font-semibold text-(--font-color-green)">Cancel</Link>
+              <Link to="/location" className="font-['Public_Sans'] flex items-center gap-2 rounded-full bg-(--bg-color-green) px-5 py-2.5 text-sm font-semibold text-(--font-color-white)">
                 Continue<img src="/icons/i-arrow-right.svg" alt="Icon Arrow Right" />
               </Link>
             </div>

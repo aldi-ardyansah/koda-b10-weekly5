@@ -7,7 +7,7 @@ function Notification() {
     <div className="min-h-screen bg-(--bg-color-body) font-['Public_Sans']">
       <NavLogin />
       <main className="mx-auto mt-10 w-[90%] px-4 md:px-9">
-        <div className="mx-auto max-w-[1100px]">
+        <div className="mx-auto max-w-1100px">
           <div className="mb-8">
             <span className="font-['IBM_Plex_Mono'] text-xs tracking-wider text-[rgba(15,107,79,1)]">ALERTS & ACTIVITY</span>
             <div className="mt-2 flex flex-wrap items-center justify-between gap-4">

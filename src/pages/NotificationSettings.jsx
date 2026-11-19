@@ -7,7 +7,7 @@ function NotificationSettings() {
     <div className="min-h-screen bg-(--bg-color-body) font-['Public_Sans']">
       <NavLogin />
       <main className="mx-auto mt-10 w-[90%] px-4 md:px-9">
-        <div className="mx-auto max-w-[900px]">
+        <div className="mx-auto max-w-900">
           <div className="mb-8">
             <span className="font-['IBM_Plex_Mono'] text-xs tracking-wider text-[rgba(15,107,79,1)]">CITIZEN MANAGEMENT</span>
             <h1 className="mt-2 font-['Fraunces'] text-3xl text-[rgba(19,35,27,1)]">Account & Case History</h1>
@@ -20,7 +20,7 @@ function NotificationSettings() {
             <Link to="/security" className="pb-4 font-['Public_Sans'] text-sm text-gray-500">Security</Link>
           </div>
           <div className="flex justify-center">
-            <form className="w-full max-w-[685px] rounded-xl border border-[rgba(215,215,205,1)] bg-[rgba(255,253,248,1)] p-8">
+            <form className="w-full max-w-172 rounded-xl border border-[rgba(215,215,205,1)] bg-[rgba(255,253,248,1)] p-8">
               <div className="mb-7 flex flex-col gap-2">
                 <h2 className="font-['Fraunces'] text-2xl text-[rgba(19,35,27,1)]">Dispatch Notification Preferences</h2>
                 <span className="font-['Public_Sans'] text-sm text-gray-500">Control when municipal bureaus may send automated status alerts.</span>

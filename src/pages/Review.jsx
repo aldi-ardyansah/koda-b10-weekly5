@@ -6,100 +6,100 @@ export default function Review() {
   return (
     <div className="min-h-screen bg-(--bg-color-body) font-['Public_Sans']">
       <NavLogin />
-      <main className="mx-auto mt-10 w-[90%] px-4 md:px-9">
-        <div className="flex gap-9">
-          <div className="w-1/4">
-            <span className="font-['IBM_Plex_Mono'] text-sm">COMMUNITY INTAKE</span>
-            <h2 className="mt-3 font-['Fraunces'] text-3xl">Report an Issue</h2>
-            <span className="mt-2 block font-['Public_Sans'] text-sm">Public civic reporting for Indonesian municipal services.</span>
-            <div className="mt-8 flex flex-col gap-3">
-              <div className="flex items-center gap-4 rounded-lg border border-[#e6f2eb] px-4 py-3">
-                <span className="font-['IBM_Plex_Mono']">01</span>
-                <span className="font-['Public_Sans']">Topic</span>
-                <img className="ml-auto" src="/icons/i-check-green.svg" alt="Icon Check" />
-              </div>
-              <div className="flex items-center gap-4 rounded-lg border border-[#e6f2eb] px-4 py-3">
-                <span className="font-['IBM_Plex_Mono']">02</span>
-                <span className="font-['Public_Sans']">Location</span>
-                <img className="ml-auto" src="/icons/i-check-green.svg" alt="Icon Check" />
-              </div>
-              <div className="flex items-center gap-4 rounded-lg border border-[#e6f2eb] px-4 py-3">
-                <span className="font-['IBM_Plex_Mono']">03</span>
-                <span className="font-['Public_Sans']">Proof</span>
-                <img className="ml-auto" src="/icons/i-check-green.svg" alt="Icon Check" />
-              </div>
-              <div className="flex items-center gap-4 rounded-lg bg-[rgba(15,107,79,1)] px-4 py-3 text-white">
-                <span className="font-['IBM_Plex_Mono']">04</span>
-                <span className="font-['Public_Sans']">Review & Send</span>
-              </div>
+      <main className="mx-auto min-h-200 w-[90%] px-4 pt-25 pb-20 md:px-9">
+        <div className="flex flex-col gap-8 lg:flex-row lg:gap-9">
+          <div className="w-full lg:w-1/4">
+            <span className="font-['IBM_Plex_Mono'] text-xs tracking-[1px] text-(--font-color-gray-light) font-medium">COMMUNITY INTAKE</span>
+            <h2 className="font-['Fraunces'] mt-2 text-2xl font-semibold text-(--font-color-black)">Report an Issue</h2>
+            <span className="font-['Public_Sans'] mt-2 block text-sm leading-[1.4] text-(--font-color-gray)">Public civic reporting for Indonesian municipal services.</span>
+            <div className="mt-3 flex flex-col gap-1">
+              <span className="button-flow-transparent flex items-center gap-3 rounded-full px-3 py-3 text-(--font-color-gray-light)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">01</span>
+                <span className="font-['Public_Sans'] text-sm">Topic</span>
+                <img className="ml-auto h-4 w-4" src="/icons/i-check-green.svg" alt="Icon Check" />
+              </span>
+              <span className="button-flow-transparent flex items-center gap-3 rounded-full px-3 py-3 text-(--font-color-gray-light)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">02</span>
+                <span className="font-['Public_Sans'] text-sm">Location</span>
+                <img className="ml-auto h-4 w-4" src="/icons/i-check-green.svg" alt="Icon Check" />
+              </span>
+              <span className="button-flow-transparent flex items-center gap-3 rounded-full px-3 py-3 text-(--font-color-gray-light)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">03</span>
+                <span className="font-['Public_Sans'] text-sm">Proof</span>
+                <img className="ml-auto h-4 w-4" src="/icons/i-check-green.svg" alt="Icon Check" />
+              </span>
+              <span className="button-flow-green flex items-center gap-3 rounded-full bg-(--bg-color-green) px-3 py-3 text-(--font-color-white)">
+                <span className="font-['IBM_Plex_Mono'] text-xs">04</span>
+                <span className="font-['Public_Sans'] text-sm">Review & Send</span>
+              </span>
             </div>
-            <div className="mt-8 rounded-lg bg-[#e6f2eb] p-5">
-              <span className="flex items-center gap-2 font-['Public_Sans']">
+            <div className="mt-3 rounded-xl border border-dashed border-(--border-color-gray-light) bg-(--bg-color-white) p-3">
+              <span className="font-['Public_Sans'] flex items-center gap-2 text-xs font-semibold text-(--font-color-black)">
                 <img src="/icons/i-shield.svg" alt="Icon Shield" />Independent Verification
               </span>
-              <p className="mt-3 text-sm font-['Public_Sans']">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</p>
+              <p className="font-['Public_Sans'] mt-2 text-xs leading-[1.7] text-(--font-color-gray-light)">Our verification desk checks each report and routes it to the municipal agency (Bina Marga, PAM JAYA, Dishub, DLH, Satpol PP, Citata). Resolution timestamps are tracked publicly.</p>
             </div>
-            <Link to="/live-feed" className="mt-6 block font-['Public_Sans'] text-sm">Cancel and return to feed</Link>
+            <Link to="/live-feed" className="font-['Public_Sans'] mt-3 block text-sm font-semibold text-(--font-color-green)">Cancel and return to feed</Link>
           </div>
-          <div className="w-3/4 rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-8">
-            <div className="border-b border-[#e4dfd4] pb-6">
-              <span className="font-['IBM_Plex_Mono'] text-sm">STEP 04 OF 04</span>
-              <h1 className="mt-2 font-['Fraunces'] text-4xl">Report summary & declaration</h1>
-              <span className="mt-3 block font-['Public_Sans'] text-sm">Review the report and choose notifications before final submission.</span>
+          <div className="w-full rounded-2xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-5 md:p-7.5 lg:w-3/4">
+            <div>
+              <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray-light)">STEP 04 OF 04</span>
+              <h1 className="font-['Fraunces'] mt-1 text-2xl font-semibold text-(--font-color-black)">Report summary & declaration</h1>
+              <span className="font-['Public_Sans'] mt-1 block text-sm text-(--font-color-gray)">Review the report and choose notifications before final submission.</span>
             </div>
             <div className="space-y-5 py-6">
               <div className="flex flex-col gap-2">
-                <span className="font-['IBM_Plex_Mono'] text-xs">CONCISE TITLE *</span>
-                <input className="w-full rounded-lg border border-[#d8d2c6] bg-transparent px-4 py-3 font-['Public_Sans'] outline-none focus:border-[rgba(15,107,79,1)]" type="text" defaultValue="Pohon tumbang di depan Kebun Binatang samping Kampus ITB" />
+                <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray)">CONCISE TITLE *</span>
+                <input className="w-full rounded-lg border border-(--border-color-gray) bg-transparent px-4 py-3 font-['Public_Sans'] text-sm text-(--font-color-black) outline-none focus:border-(--border-color-green)" type="text" defaultValue="Pohon tumbang di depan Kebun Binatang samping Kampus ITB" />
               </div>
               <div className="flex flex-col gap-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-['IBM_Plex_Mono'] text-xs">INCIDENT OBSERVATION DETAILS *</span>
-                  <span className="font-['IBM_Plex_Mono'] text-xs">100 chars (min 15)</span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray)">INCIDENT OBSERVATION DETAILS *</span>
+                  <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray-light)">100 chars (min 15)</span>
                 </div>
-                <textarea className="min-h-32 w-full rounded-lg border border-[#d8d2c6] bg-transparent px-4 py-3 font-['Public_Sans'] outline-none focus:border-[rgba(15,107,79,1)]" defaultValue="Pohon tumbang sekitar lokasi mengganggu mobilitas masyarakat yang melintas, mohon untuk diperhatikan"></textarea>
+                <textarea className="min-h-32 w-full rounded-lg border border-(--border-color-gray) bg-transparent px-4 py-3 font-['Public_Sans'] text-sm text-(--font-color-black) outline-none focus:border-(--border-color-green)" defaultValue="Pohon tumbang sekitar lokasi mengganggu mobilitas masyarakat yang melintas, mohon untuk diperhatikan"></textarea>
               </div>
-              <div className="flex items-center gap-4 rounded-lg border border-[#e6f2eb] bg-[#e6f2eb] p-4">
+              <div className="flex items-center gap-4 rounded-lg border border-(--border-color-green-light) bg-(--bg-color-green-light) p-4">
                 <img src="/icons/i-lock-green.svg" alt="Icon Lock" />
                 <div className="flex flex-1 flex-col gap-1">
-                  <span className="font-['Public_Sans'] text-sm">Post anonymously on public feed</span>
-                  <span className="font-['Public_Sans'] text-xs">Your name will be masked as Warga Anonim on open records.</span>
+                  <span className="font-['Public_Sans'] text-sm text-(--font-color-black)">Post anonymously on public feed</span>
+                  <span className="font-['Public_Sans'] text-xs text-(--font-color-gray)">Your name will be masked as Warga Anonim on open records.</span>
                 </div>
-                <input className="h-4 w-4 accent-[rgba(15,107,79,1)]" type="checkbox" />
+                <input className="h-4 w-4 accent-(--bg-color-green)" type="checkbox" />
               </div>
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <div className="flex flex-col gap-2">
-                  <span className="font-['IBM_Plex_Mono'] text-xs">FILLER NAME *</span>
-                  <input className="w-full rounded-lg border border-[#d8d2c6] bg-transparent px-4 py-3 font-['Public_Sans'] outline-none focus:border-[rgba(15,107,79,1)]" type="text" defaultValue="Aldi Ardyansah" />
+                  <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray)">FILLER NAME *</span>
+                  <input className="w-full rounded-lg border border-(--border-color-gray) bg-transparent px-4 py-3 font-['Public_Sans'] text-sm text-(--font-color-black) outline-none focus:border-(--border-color-green)" type="text" defaultValue="Aldi Ardyansah" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="font-['IBM_Plex_Mono'] text-xs">EMAIL FOR STATUS ALERTS *</span>
-                  <input className="w-full rounded-lg border border-[#d8d2c6] bg-transparent px-4 py-3 font-['Public_Sans'] outline-none focus:border-[rgba(15,107,79,1)]" type="text" defaultValue="aldi@wargareport.id" />
+                  <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray)">EMAIL FOR STATUS ALERTS *</span>
+                  <input className="w-full rounded-lg border border-(--border-color-gray) bg-transparent px-4 py-3 font-['Public_Sans'] text-sm text-(--font-color-black) outline-none focus:border-(--border-color-green)" type="text" defaultValue="aldi@wargareport.id" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="font-['IBM_Plex_Mono'] text-xs">PHONE / WHATSAPP</span>
-                  <input className="w-full rounded-lg border border-[#d8d2c6] bg-transparent px-4 py-3 font-['Public_Sans'] outline-none focus:border-[rgba(15,107,79,1)]" type="text" defaultValue="+62 812-9842-1054" />
+                  <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray)">PHONE / WHATSAPP</span>
+                  <input className="w-full rounded-lg border border-(--border-color-gray) bg-transparent px-4 py-3 font-['Public_Sans'] text-sm text-(--font-color-black) outline-none focus:border-(--border-color-green)" type="text" defaultValue="+62 812-9842-1054" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <span className="font-['IBM_Plex_Mono'] text-xs">STATUS ALERT CHANNELS</span>
-                  <div className="flex items-center gap-3">
-                    <input className="h-4 w-4 accent-[rgba(15,107,79,1)]" type="checkbox" />
-                    <span className="font-['Public_Sans'] text-sm">Email</span>
-                    <input className="h-4 w-4 accent-[rgba(15,107,79,1)]" type="checkbox" />
-                    <span className="font-['Public_Sans'] text-sm">SMS</span>
+                  <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray)">STATUS ALERT CHANNELS</span>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <input className="h-4 w-4 accent-(--bg-color-green)" type="checkbox" />
+                    <span className="font-['Public_Sans'] text-sm text-(--font-color-black)">Email</span>
+                    <input className="h-4 w-4 accent-(--bg-color-green)" type="checkbox" />
+                    <span className="font-['Public_Sans'] text-sm text-(--font-color-black)">SMS</span>
                   </div>
                 </div>
               </div>
-              <div className="flex items-start gap-3 border-t border-[#e4dfd4] pt-5">
-                <input className="mt-1 h-4 w-4 accent-[rgba(15,107,79,1)]" type="checkbox" />
-                <span className="font-['Public_Sans'] text-sm">I confirm this incident was authentically observed on-site under Law No. 25/2009.</span>
+              <div className="flex items-center gap-3">
+                <input className="mt-1 h-4 w-4 accent-(--bg-color-green)" type="checkbox" />
+                <span className="font-['Public_Sans'] text-sm text-(--font-color-black)">I confirm this incident was authentically observed on-site under Law No. 25/2009.</span>
               </div>
             </div>
-            <div className="flex items-center justify-between border-t border-[#e4dfd4] pt-6">
-              <Link to="/proof" className="flex items-center gap-2 font-['Public_Sans']">
+            <div className="flex items-center justify-between border-t border-(--border-color-gray-light) pt-4">
+              <Link to="/proof" className="font-['Public_Sans'] flex items-center gap-2 rounded-full border border-(--border-color-gray) px-4 py-2 text-sm font-medium text-(--font-color-black)">
                 <img src="/icons/i-arrow-left.svg" alt="Icon Arrow Left" />Back
               </Link>
-              <Link to="/receipt" className="flex items-center gap-2 rounded-full bg-[rgba(15,107,79,1)] px-6 py-3 text-white font-['Public_Sans']">
+              <Link to="/receipt" className="font-['Public_Sans'] flex items-center gap-2 rounded-full bg-(--bg-color-green) px-5 py-2.5 text-sm font-semibold text-(--font-color-white)">
                 Dispatch Report<img src="/icons/i-arrow-right.svg" alt="Icon Arrow Right" />
               </Link>
             </div>

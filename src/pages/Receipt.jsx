@@ -6,44 +6,44 @@ export default function Receipt() {
   return (
     <div className="min-h-screen bg-(--bg-color-body) font-['Public_Sans']">
       <NavLogin />
-      <main className="mx-auto mt-10 w-[90%] px-4 md:px-9">
-        <div className="mx-auto w-[60%] rounded-xl border border-[#e4dfd4] bg-[#fffdf8] p-8">
-          <div className="border-b border-[#e4dfd4] pb-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2 rounded-full bg-[#e6f2eb] px-4 py-2 font-['Public_Sans']">
+      <main className="mx-auto w-[90%] px-4 pt-25 md:px-9">
+        <div className="w-full rounded-2xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-5 md:w-[60%] md:p-7.5">
+          <div className="border-b border-(--border-color-gray-light) pb-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
+              <div className="flex items-center gap-2 rounded-full border border-(--border-color-gray-light) bg-(--bg-color-body) px-4 py-2 font-['Public_Sans'] text-sm font-medium text-(--font-color-gray)">
                 <img src="/icons/i-clock.svg" alt="Icon Clock" />
                 Submitted
               </div>
-              <span className="font-['IBM_Plex_Mono'] text-sm">Logged 04:41 PM</span>
+              <span className="font-['IBM_Plex_Mono'] text-sm text-(--font-color-gray-light)">Logged 04:41 PM</span>
             </div>
-            <span className="mt-8 block font-['IBM_Plex_Mono'] text-xs">OFFICIAL TRACKING REFERENCE</span>
-            <div className="mt-2 flex items-center justify-between">
-              <span className="font-['IBM_Plex_Mono'] text-3xl">CMP-2026-9472</span>
-              <span className="cursor-pointer">
+            <span className="font-['IBM_Plex_Mono'] mt-4 text-xs tracking-[1px] text-(--font-color-gray-light) font-medium">OFFICIAL TRACKING REFERENCE</span>
+            <div className="mt-2 flex flex-wrap items-center gap-3">
+              <span className="font-['IBM_Plex_Mono'] text-4xl font-semibold text-(--font-color-green)">CMP-2026-9472</span>
+              <span className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-(--border-color-gray-light)">
                 <img src="/icons/i-copy.svg" alt="Icon Copy" />
               </span>
             </div>
-            <div className="mt-5 flex flex-col gap-2">
-              <span className="font-['Public_Sans']">Pohon tumbang di depan Kebun Binatang samping Kampus ITB</span>
-              <span className="font-['IBM_Plex_Mono'] text-xs">Dinas Pertamanan dan Hutan Kota · Jl. Tamansari depan Kebun Binatang</span>
+            <div className="mt-4 flex flex-col gap-2 rounded-xl border border-dashed border-(--border-color-gray-light) bg-(--bg-color-body) p-4">
+              <span className="font-['Public_Sans'] text-sm font-semibold text-(--font-color-black)">Pohon tumbang di depan Kebun Binatang samping Kampus ITB</span>
+              <span className="font-['IBM_Plex_Mono'] text-xs leading-[1.6] text-(--font-color-gray-light)">Dinas Pertamanan dan Hutan Kota · Jl. Tamansari depan Kebun Binatang</span>
             </div>
           </div>
-          <div className="py-6">
-            <span className="font-['Fraunces'] text-2xl">What happens next</span>
-            <ol className="mt-5 list-decimal space-y-4 pl-6 font-['IBM_Plex_Mono']">
-              <li className="pl-2 font-['Public_Sans'] text-sm">Your report is awaiting evidence verification. Proposed bureau: <span className="font-bold">Dinas Pertamanan dan Hutan Kota</span>.</li>
-              <li className="pl-2 font-['Public_Sans'] text-sm">A duty inspector will assess site urgency within the target <span className="font-bold">48-hour SLA window</span> once routed.</li>
-              <li className="pl-2 font-['Public_Sans'] text-sm">Status transitions and official statements will appear directly on your tracking page.</li>
+          <div className="border-b border-(--border-color-gray-light) py-4">
+            <span className="font-['Fraunces'] text-base font-semibold text-(--font-color-black)">What happens next</span>
+            <ol className="mt-4 list-decimal space-y-3 pl-5 marker:text-(--font-color-green)">
+              <li className="pl-0 font-['Public_Sans'] text-sm leading-[1.6] text-(--font-color-gray)">Your report is awaiting evidence verification. Proposed bureau: <span className="font-bold text-(--font-color-gray)">Dinas Pertamanan dan Hutan Kota</span>.</li>
+              <li className="pl-0 font-['Public_Sans'] text-sm leading-[1.6] text-(--font-color-gray)">A duty inspector will assess site urgency within the target <span className="font-bold text-(--font-color-gray)">48-hour SLA window</span> once routed.</li>
+              <li className="pl-0 font-['Public_Sans'] text-sm leading-[1.6] text-(--font-color-gray)">Status transitions and official statements will appear directly on your tracking page.</li>
             </ol>
           </div>
-          <div className="flex flex-wrap items-center gap-4 border-t border-[#e4dfd4] pt-6">
-            <Link to="/track" className="flex items-center gap-2 rounded-full bg-[rgba(15,107,79,1)] px-5 py-3 text-white font-['Public_Sans']">
+          <div className="flex flex-wrap items-center gap-3 pt-4">
+            <Link to="/track" className="font-['Public_Sans'] flex items-center gap-2 rounded-full bg-(--bg-color-green) px-5 py-2.5 text-sm font-semibold text-(--font-color-white)">
               Track report status<img src="/icons/i-arrow-right.svg" alt="Icon Arrow Right" />
             </Link>
-            <a href="#" className="flex items-center gap-2 rounded-full border border-[#d8d2c6] px-5 py-3 font-['Public_Sans']">
+            <a href="#" className="font-['Public_Sans'] flex items-center gap-2 rounded-full border border-(--border-color-gray-light) px-5 py-2.5 text-sm font-medium text-(--font-color-black)">
               <img src="/icons/i-print.svg" alt="Icon Print" />Print receipt
             </a>
-            <Link to="/live-feed" className="font-['Public_Sans']">Back to feed</Link>
+            <Link to="/live-feed" className="font-['Public_Sans'] text-sm font-medium text-(--font-color-green)">Back to feed</Link>
           </div>
         </div>
       </main>
