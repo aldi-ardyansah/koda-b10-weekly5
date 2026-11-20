@@ -18,29 +18,29 @@ import DataExport from "./pages/DataExport";
 import Security from "./pages/Security";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Landing />} />
-                <Route path="/live-feed" element={<LiveFeed />} />
-                <Route path="/track" element={<Track />} />
-                <Route path="/help" element={<Help />} />
-                <Route path="/detail-report" element={<DetailReport />} />
-                <Route path="/list-complaint" element={<ListComplaint />} />
-                <Route path="/topic" element={<Topic />} />
-                <Route path="/location" element={<Location />} />
-                <Route path="/proof" element={<Proof />} />
-                <Route path="/review" element={<Review />} />
-                <Route path="/receipt" element={<Receipt />} />
-                <Route path="/notification" element={<Notification />} />
-                <Route path="/notification-settings" element={<NotificationSettings />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/data-export" element={<DataExport />} />
-                <Route path="/security" element={<Security />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/live-feed" element={<LiveFeed />} />
+        <Route path="/track" element={<Track />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/detail-report" element={<DetailReport />} />
+        <Route path="/list-complaint" element={<ListComplaint />} />
+        <Route path="/topic" element={<Topic />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/proof" element={<Proof />} />
+        <Route path="/review" element={<Review />} />
+        <Route path="/receipt" element={<Receipt />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/notification-settings" element={<NotificationSettings />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/data-export" element={<DataExport />} />
+        <Route path="/security" element={<Security />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
