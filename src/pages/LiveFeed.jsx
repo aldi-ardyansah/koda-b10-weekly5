@@ -148,17 +148,17 @@ function LiveFeed() {
     <div className="min-h-screen bg-(--bg-color-body) font-['Public_Sans']">
       <Nav />
       <main className="mx-auto mt-10 w-[90%] px-4 md:px-9">
-        <div className="flex flex-col gap-6 pt-12 md:pt-12">
+        <div className="flex flex-col gap-6 pt-10 md:pt-12">
           <div className="flex flex-col gap-3">
             <span className="font-['IBM_Plex_Mono'] text-xs font-medium tracking-wide text-(--font-color-gray-light)">PUBLIC INCIDENT REGISTRY</span>
-            <h1 className="font-['Fraunces'] text-4xl font-semibold text-(--font-color-black) md:text-4xl">Community Reports & Fixes</h1>
+            <h1 className="font-['Fraunces'] text-3xl font-semibold text-(--font-color-black) sm:text-4xl">Community Reports & Fixes</h1>
             <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
-              <p className="max-w-150 font-['Public_Sans'] text-sm text-(--font-color-gray)">Open incident feed in Jakarta and surrounding urban regions. Public visitors may browse; sign in to interact.</p>
+              <p className="max-w-150 text-sm text-(--font-color-gray)">Open incident feed in Jakarta and surrounding urban regions. Public visitors may browse; sign in to interact.</p>
               <div className="flex items-center self-start rounded-full border border-(--border-color-gray) bg-(--bg-color-white) p-1">
-                <div className="flex items-center gap-2 rounded-full bg-(--font-color-green) px-4 py-2 font-['Public_Sans'] text-xs font-semibold text-white">
+                <div className="flex items-center gap-2 rounded-full bg-(--font-color-green) px-4 py-2 text-xs font-semibold text-white">
                   <img src="/icons/i-list.svg" alt="Icon List" />Feed
                 </div>
-                <div className="flex items-center gap-2 rounded-full px-4 py-2 font-['Public_Sans'] text-xs text-(--font-color-gray)">
+                <div className="flex items-center gap-2 rounded-full px-4 py-2 text-xs text-(--font-color-gray)">
                   <img src="/icons/i-map.svg" alt="Icon Map" />Map
                 </div>
               </div>
@@ -166,28 +166,28 @@ function LiveFeed() {
           </div>
           <div className="flex w-full max-w-110 items-center gap-3 rounded-xl border border-(--border-color-gray) bg-(--bg-color-white) px-4 py-3">
             <img src="/icons/i-search-gray.svg" alt="Icon Search" />
-            <input className="w-full bg-transparent font-['Public_Sans'] text-xs text-(--font-color-black) outline-none placeholder:text-(--font-color-gray-light)" type="text" placeholder="Search by street name, complaint ID, or keyword..." value={search} onChange={(e) => setSearch(e.target.value)} />
+            <input className="w-full min-w-0 bg-transparent text-xs text-(--font-color-black) outline-none placeholder:text-(--font-color-gray-light)" type="text" placeholder="Search by street name, complaint ID, or keyword..." value={search} onChange={(e) => setSearch(e.target.value)} />
           </div>
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
-              <label key={category.label} className="flex cursor-pointer items-center gap-2 rounded-full border border-(--border-color-gray) bg-(--bg-color-white) px-4 py-2 font-['Public_Sans'] text-xs text-(--font-color-gray) has-checked:border-(--font-color-green) has-checked:bg-(--font-color-green) has-checked:font-semibold has-checked:text-white">
+              <label key={category.label} className="flex cursor-pointer items-center gap-2 rounded-full border border-(--border-color-gray) bg-(--bg-color-white) px-3 py-2 text-xs text-(--font-color-gray) has-checked:border-(--font-color-green) has-checked:bg-(--font-color-green) has-checked:font-semibold has-checked:text-white sm:px-4">
                 <input className="hidden" type="radio" name="category" checked={selectedCategory === (category.icon === null ? "All" : category.label)} onChange={() => setSelectedCategory(category.icon === null ? "All" : category.label)} />
                 {category.icon && <img src={`/icons/${category.icon}`} alt="" />}
                 {category.label}
               </label>
             ))}
           </div>
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex flex-wrap items-center rounded-full border border-(--border-color-gray) bg-(--bg-color-white) p-1">
-              <span className="px-3 font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray-light)">STATUS:</span>
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-wrap items-center gap-1 rounded-2xl border border-(--border-color-gray) bg-(--bg-color-white) p-1 sm:rounded-full">
+              <span className="px-3 py-2 font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray-light)">STATUS:</span>
               {statuses.map((status) => (
-                <label key={status} className="cursor-pointer rounded-full px-4 py-2 font-['Public_Sans'] text-xs text-(--font-color-gray) has-checked:bg-(--font-color-green) has-checked:font-semibold has-checked:text-white">
+                <label key={status} className="cursor-pointer rounded-full px-3 py-2 text-xs text-(--font-color-gray) has-checked:bg-(--font-color-green) has-checked:font-semibold has-checked:text-white sm:px-4">
                   <input className="hidden" type="radio" name="status" checked={selectedStatus === status} onChange={() => setSelectedStatus(status)} />
                   {status}
                 </label>
               ))}
             </div>
-            <label className="flex cursor-pointer items-center gap-2 self-start rounded-full border border-(--border-color-gray) bg-(--bg-color-white) px-4 py-3 font-['Public_Sans'] text-xs text-(--font-color-gray)">
+            <label className="flex cursor-pointer items-center gap-2 self-start rounded-full border border-(--border-color-gray) bg-(--bg-color-white) px-4 py-3 text-xs text-(--font-color-gray)">
               <input className="h-4 w-4 accent-(--font-color-green)" type="checkbox" checked={photosOnly} onChange={(e) => setPhotosOnly(e.target.checked)} />
               With photos/proof only
             </label>
@@ -195,7 +195,7 @@ function LiveFeed() {
         </div>
         <article className="mt-6 flex flex-col overflow-hidden rounded-2xl border border-(--border-color-gray) bg-(--bg-color-white)">
           {filteredReports.map((report, index) => (
-            <div key={report.id} className={`flex flex-col items-start gap-3 px-4 py-4 md:flex-row md:items-center md:gap-3 ${index !== filteredReports.length - 1 ? "border-b border-(--border-color-gray)" : ""}`}>
+            <div key={report.id} className={`flex flex-col items-start gap-3 px-3 py-4 sm:px-4 md:flex-row md:items-center md:gap-3 ${index !== filteredReports.length - 1 ? "border-b border-(--border-color-gray)" : ""}`}>
               {report.image ? (
                 <img className="h-20 w-20 shrink-0 rounded-xl object-cover" src={report.image} alt={report.imageAlt} />
               ) : (
@@ -203,22 +203,22 @@ function LiveFeed() {
               )}
               <div className="flex min-w-0 flex-1 flex-col gap-2">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className={`flex items-center gap-1 rounded-full border px-2 py-1 font-['Public_Sans'] text-xs font-medium ${report.statusClass} ${report.status === "Submitted" ? "opacity-80" : ""}`}>
+                  <span className={`flex items-center gap-1 rounded-full border px-2 py-1 text-xs font-medium ${report.statusClass} ${report.status === "Submitted" ? "opacity-80" : ""}`}>
                     <img src={`/icons/${report.statusIcon}`} alt="" />{report.status}
                   </span>
                   <span className="font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray-light)">{report.id}</span>
                   <span className="text-xs text-(--font-color-gray-light)">·</span>
-                  <span className="font-['Public_Sans'] text-xs font-semibold text-(--font-color-black)">{report.agency}</span>
+                  <span className="wrap-break-words text-xs font-semibold text-(--font-color-black)">{report.agency}</span>
                 </div>
-                <span className={`font-['Public_Sans'] text-sm font-semibold leading-normal ${report.status === "Submitted" ? "text-(--font-color-green)" : "text-(--font-color-black)"}`}>{report.title}</span>
-                <div className="flex flex-wrap items-center gap-1 font-['Public_Sans'] text-xs leading-normal text-(--font-color-gray-light)">
-                  <img src="/icons/i-map-pin.svg" alt="Icon Map Pin" width="12" height="12" />
+                <span className={`text-sm font-semibold leading-normal ${report.status === "Submitted" ? "text-(--font-color-green)" : "text-(--font-color-black)"}`}>{report.title}</span>
+                <div className="flex flex-wrap items-center gap-1 text-xs leading-normal text-(--font-color-gray-light)">
+                  <img className="shrink-0" src="/icons/i-map-pin.svg" alt="Icon Map Pin" width="12" height="12" />
                   <span>{report.location}</span>
                   <span>·</span>
                   <span>{report.category}</span>
                 </div>
               </div>
-              <div className="flex shrink-0 flex-wrap items-center gap-3 pl-0 md:pl-2">
+              <div className="flex w-full shrink-0 flex-wrap items-center gap-3 md:w-auto md:pl-2">
                 <span className={`flex items-center gap-1 rounded-full border border-(--border-color-gray) px-3 py-2 font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray) ${report.disabled ? "opacity-50" : ""}`}>
                   <img src="/icons/i-thumbs-up.svg" alt="Icon Thumbs Up" />{report.likes}
                 </span>
@@ -226,7 +226,7 @@ function LiveFeed() {
                   <img src="/icons/i-list-green.svg" alt="Icon List" />{report.proof}
                 </span>
                 <span className="whitespace-nowrap font-['IBM_Plex_Mono'] text-xs text-(--font-color-gray-light)">{report.date}</span>
-                <Link className="flex items-center gap-1 whitespace-nowrap font-['Public_Sans'] text-xs font-semibold text-(--font-color-green)" to={report.link}>
+                <Link className="flex items-center gap-1 whitespace-nowrap text-xs font-semibold text-(--font-color-green)" to={report.link}>
                   Track<img src="/icons/i-arrow-right-green.svg" alt="Icon Arrow Right" />
                 </Link>
               </div>

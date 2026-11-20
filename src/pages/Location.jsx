@@ -47,7 +47,7 @@ function Location() {
             </div>
             <Link to="/live-feed" className="font-['Public_Sans'] mt-3 block text-sm font-semibold text-(--font-color-green)">Cancel and return to feed</Link>
           </div>
-          <div className="w-full rounded-xl border border-(--border-color-gray) bg-(--bg-color-white) p-5 md:w-3/4 md:p-8">
+          <div className="w-full rounded-xl border border-(--border-color-gray) bg-(--bg-color-white) p-5 lg:w-3/4 md:p-8">
             <div className="flex flex-col gap-2 border-b border-(--border-color-gray) pb-6">
               <span className="font-['IBM_Plex_Mono'] text-xs font-medium tracking-[1px] text-(--font-color-gray-light)">STEP 02 OF 04</span>
               <h1 className="font-['Fraunces'] text-2xl font-semibold text-(--font-color-black)">Where is it located?</h1>
@@ -76,10 +76,10 @@ function Location() {
               </div>
             </div>
             <div className="flex flex-col justify-between gap-3 border-t border-(--border-color-gray) pt-5 sm:flex-row">
-              <Link className="font-['Public_Sans'] flex items-center justify-center gap-2 rounded-lg border border-(--border-color-gray) px-5 py-3 text-xs font-medium text-(--font-color-gray)" to="/topic">
+              <Link className="font-['Public_Sans'] flex items-center justify-center gap-2 rounded-full border border-(--border-color-gray) px-5 py-3 text-sm font-medium text-(--font-color-gray)" to="/topic">
                 <img src="/icons/i-arrow-left.svg" alt="Icon Arrow Left" />Back
               </Link>
-              <Link className="font-['Public_Sans'] flex items-center justify-center gap-2 rounded-lg bg-(--bg-color-green) px-5 py-3 text-xs font-semibold text-(--font-color-white)" to="/proof">
+              <Link className="font-['Public_Sans'] flex items-center justify-center gap-2 rounded-full bg-(--bg-color-green) px-5 py-3 text-sm font-semibold text-(--font-color-white)" to="/proof">
                 Continue<img src="/icons/i-arrow-right.svg" alt="Icon Arrow Right" />
               </Link>
             </div>
