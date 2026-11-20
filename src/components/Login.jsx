@@ -1,40 +1,40 @@
-function Login({ isOpen = false, onClose = () => { } }) {
+function Login({ isOpen = false, onClose = () => { }, onSwitchToRegister = () => { } }) {
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-2000 flex items-center justify-center overflow-y-auto bg-[rgba(19,35,27,0.55)] px-4 py-6">
-      <div className="max-h-full w-full max-w-120 overflow-y-auto rounded-2xl border border-(--border-color-gray-light) bg-(--bg-color-white) p-4 shadow-xl sm:p-6">
-        <div className="flex items-start justify-between gap-4">
+      <div className="my-auto w-full max-w-120 overflow-hidden rounded-2xl border border-(--border-color-gray-light) bg-(--bg-color-white) shadow-xl">
+        <div className="flex items-start justify-between gap-4 border-b border-(--border-color-gray-light) bg-(--bg-color-body) px-6 pt-6 pb-2">
           <div className="min-w-0">
-            <h2 className="font-['Fraunces'] text-xl font-semibold text-(--font-color-black) sm:text-2xl">Sign In to WargaReport</h2>
-            <p className="mt-2 font-['Public_Sans'] text-sm text-(--font-color-gray)">Sign in to lodge a complaint or upvote issues.</p>
+            <h2 className="font-['Fraunces'] text-xl font-semibold text-(--font-color-black)">Sign In to WargaReport</h2>
+            <p className="mt-1 font-['Public_Sans'] text-sm text-(--font-color-gray)">Sign in to lodge a complaint or upvote issues.</p>
           </div>
           <button type="button" onClick={onClose} className="shrink-0">
             <img src="/icons/i-close.svg" alt="Icon Close" />
           </button>
         </div>
-        <div className="mt-6">
-          <div className="flex flex-wrap border-b border-(--border-color-gray-light)">
-            <span className="border-b-2 border-(--border-color-green) px-2 py-3 font-['Public_Sans'] text-xs font-semibold text-(--font-color-green) sm:px-3">Sign In Existing Account</span>
-            <a href="#" className="px-2 py-3 font-['Public_Sans'] text-xs text-(--font-color-gray-light) sm:px-3">Register as Citizen</a>
+        <div className="p-6">
+          <div className="flex gap-2">
+            <span className="flex flex-1 items-center justify-center rounded-full bg-(--bg-color-green) px-2 py-2 text-center text-sm font-semibold text-(--font-color-white)">Sign In Existing Account</span>
+            <button type="button" onClick={onSwitchToRegister} className="flex-1 rounded-full bg-(--bg-color-body) px-2 py-2 text-center text-sm text-(--font-color-gray)">Register as Citizen</button>
           </div>
-          <form className="mt-6 flex flex-col gap-5">
+          <form className="mt-5 flex flex-col gap-3">
             <div className="flex flex-col gap-2">
               <label className="font-['IBM_Plex_Mono'] text-xs font-medium tracking-wider text-(--font-color-gray)" htmlFor="login-email">EMAIL ADDRESS</label>
-              <div className="flex min-w-0 items-center gap-3 rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) px-4 py-3 focus-within:border-(--border-color-green)">
+              <div className="flex min-w-0 items-center gap-3 rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) px-3 py-2 focus-within:border-(--border-color-green)">
                 <img src="/icons/i-email.svg" alt="Icon Email" />
                 <input className="min-w-0 w-full bg-transparent font-['Public_Sans'] text-sm text-(--font-color-black) outline-none placeholder:text-(--font-color-gray-light)" type="email" id="login-email" placeholder="Enter your Email" required />
               </div>
             </div>
             <div className="flex flex-col gap-2">
               <label className="font-['IBM_Plex_Mono'] text-xs font-medium tracking-wider text-(--font-color-gray)" htmlFor="login-password">PASSWORD</label>
-              <div className="flex min-w-0 items-center gap-3 rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) px-4 py-3 focus-within:border-(--border-color-green)">
+              <div className="flex min-w-0 items-center gap-3 rounded-xl border border-(--border-color-gray-light) bg-(--bg-color-white) px-3 py-2 focus-within:border-(--border-color-green)">
                 <img src="/icons/i-lock.svg" alt="Icon Lock" />
                 <input className="min-w-0 w-full bg-transparent font-['Public_Sans'] text-sm text-(--font-color-black) outline-none placeholder:text-(--font-color-gray-light)" type="password" id="login-password" placeholder="Enter your password" required />
                 <img className="shrink-0 cursor-pointer" src="/icons/i-eye.svg" alt="Icon Eye" />
               </div>
             </div>
-            <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-full bg-(--bg-color-green) px-5 py-3 font-['Public_Sans'] text-sm font-semibold text-(--font-color-white) hover:opacity-90">
+            <button type="submit" className="flex w-full items-center justify-center gap-2 rounded-full bg-(--bg-color-green) px-5 py-2 font-['Public_Sans'] text-xs font-semibold text-(--font-color-white) hover:opacity-90">
               Sign In<img src="/icons/i-arrow-right.svg" alt="Icon Arrow Right" />
             </button>
           </form>
